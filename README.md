@@ -1,42 +1,8 @@
-====================================================================
+
 **_ Building an Shophere Ecommerce Website with Vanilla JavaScript _**
-====================================================================
-
-**_ Folder structure _**
-
-my-vanilla-js-project/
-├── public/
-│ ├── images/
-│ │ ├── logo.png
-│ │ └── background.jpg
-│ └── index.html
-├── src/
-│ ├── index.html
-│ ├── main.js
-│ ├── utils.js
-│ └── styles.css
-├── vite.config.js
-└── package.json
-
-**_ or we can also use _**
-
-my-vanilla-js-project/
-├── public/
-│ ├── images/
-│ │ ├── logo.png
-│ │ └── background.jpg
-│ └── index.html
-├── index.html
-├── main.js
-├── styles.css
-├── vite.config.js
-└── package.json
 
 
 
-====================================================================
-**_ Steps to Create a Function for Displaying Product Containers _**
-====================================================================
 
 ## Step 1: Selecting DOM Elements
 
