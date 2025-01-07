@@ -155,6 +155,6 @@ You've defined the `addToCart` function, enabling users to add products to their
 
 ## Step 5: Convert Cart Array to JSON and Store in Local Storage
 
-- Convert the updated cart array to JSON format using `JSON.stringify()`.
+- Convert the updated cart array to JSON format using {`JSON.stringify()`}.
 - Store the JSON string in local storage under a designated key.
 
