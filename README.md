@@ -1,160 +1,153 @@
+🛒 Shophere – E-Commerce Website (Vanilla JavaScript)
 
-**_ Building an Shophere Ecommerce Website with Vanilla JavaScript _**
+A lightweight E-commerce web application built using pure JavaScript (no frameworks).
+This project demonstrates DOM manipulation, event handling, localStorage usage, and dynamic UI rendering — ideal for mastering core JavaScript concepts.
 
+✨ Features
 
+✅ Dynamic product rendering using templates
+✅ Quantity increment & decrement with stock control
+✅ Add-to-Cart functionality
+✅ Cart persistence using localStorage
+✅ Clean, modular JavaScript structure
 
+🚀 Product Rendering Workflow
+🔹 Step 1: Select DOM Elements
 
-## Step 1: Selecting DOM Elements
+Use document.querySelector() to target:
 
-- Use `document.querySelector()` to select the product container and template container elements from the HTML document.
+Product container
 
-## Step 2: Defining the Function
+HTML template container
 
-- Define a function named `showProductContainer` that takes an array of products as input.
+🔹 Step 2: Define showProductContainer()
 
-## Step 3: Checking for Valid Input
+Create a function that accepts an array of products and dynamically renders them on the page.
 
-- Check if the `products` array is truthy. If not, return `false`.
+🔹 Step 3: Validate Input
 
-## Step 4: Iterating Over Products
+Ensure the product list exists before proceeding:
+if (!products) return false;
 
-- Iterate over each product in the `products` array using `forEach()`.
+🔹 Step 4: Loop Through Products
 
-## Step 5: Destructuring Product Properties
+Iterate using forEach() to handle each product individually.
 
-- Destructure the properties of each product object (brand, category, description, etc.) for easier access.
+🔹 Step 5: Destructure Product Data
 
-## Step 6: Cloning the Template
+Extract properties like:
 
-- Use `document.importNode()` to clone the template container for each product.
+id
 
-## Step 7: Updating Product Information
+brand
 
-- Update the cloned template with the product details:
-  - Set the text content of elements to display product information.
-  - Set the source attribute of the product image element.
-  - Calculate and display the actual price based on the product price.
+category
 
-## Step 8: Adding Event Listener
+price
 
-- Add an event listener to a specific element (`.stockElement`) within each product template.
-- Use event delegation to handle click events and pass relevant data (event, product id, stock) to the `homeQuantityToggle()` function.
+stock
 
-## Step 9: Appending to Product Container
+description
 
-- Append the cloned template with updated product information to the product container element.
+image
 
-## Step 10: Ensuring Container Availability
+This improves readability and performance.
 
-- Check if the product container element exists before appending the cloned template.
+🔹 Step 6: Clone Template
+Use document.importNode() to duplicate the product template for each item.
 
-## Conclusion
+🔹 Step 7: Update Product Details
 
--  created a function that dynamically populates the product container with product information based on the provided array of products.
+.Populate the cloned template with:
 
+.Product name & description
 
-**_ # Steps to Define the homeQuantityToggle Function _**
+.Image source
 
+.Calculated price
 
-# Steps to Define the homeQuantityToggle Function
+.Stock availability
 
-## Step 1: Create a New JavaScript File
+🔹 Step 8: Quantity Toggle (Event Delegation)
 
-- Create `quantityToggle.js` to contain `homeQuantityToggle`.
+Attach a single click event to .stockElement:
 
-## Step 2: Define the Function
+.Handles increment & decrement
 
-- Define `homeQuantityToggle(event, id, stock)`.
+.Passes event, productId, and stock to homeQuantityToggle()
 
-## Step 3: Select Current Card Element
+🔹 Step 9: Append to Container
 
-- Use `document.querySelector()` to select the card element based on `id`.
+Insert the updated product card into the product container.
 
-## Step 4: Retrieve Product Quantity
+🔹 Step 10: Safety Check
 
-- Retrieve product quantity using `querySelector()`.
+Ensure the product container exists before appending.
 
-## Step 5: Parse Quantity Attribute
+🎯 Quantity Management (homeQuantityToggle)
 
-- Parse `data-quantity` attribute to an integer.
+📁 File: quantityToggle.js
 
-## Step 6: Handle Increment Event
+How It Works
 
-- Increment quantity if event target is `"cartIncrement"` and quantity < stock.
+Identify the clicked product card using id
 
-## Step 7: Handle Decrement Event
+Read the current quantity from data-quantity
 
-- Decrement quantity if event target is `"cartDecrement"` and quantity > 1.
+Increment quantity (if stock allows)
 
-## Step 8: Update Product Quantity Display
+Decrement quantity (minimum = 1)
 
-- Update text content of product quantity element.
+Update UI & attributes in real-time
 
-## Step 9: Update Quantity Attribute
+Return updated quantity
 
-- Set `data-quantity` attribute to new quantity.
+✔ Prevents over-ordering
+✔ Ensures smooth UX
 
-## Step 10: Return Quantity
+🔹 What Happens on Add to Cart?
 
-- Return updated quantity.
+Locate the selected product card
 
-## Conclusion
+Fetch:
 
-You've created `homeQuantityToggle` in `quantityToggle.js`, enabling users to update product quantities interactively.
+Product quantity
 
-**_ Add To Cart Functionality _**
+Product price
 
+Prepare the data for cart storage
 
-# Steps to Define the addToCart Function
+💾 Cart Persistence (Local Storage)
+🔹 Retrieve Cart Products
 
-## Step 1: Find Current Card Price and Quantity
+Create getCartProductFromLocalStorage() to:
 
-- Select the current card element based on the provided `id`.
-- Retrieve the product quantity from the current card element.
-- Retrieve the product price from the current card element.
+Access stored cart data
 
-## Conclusion
+Handle empty cart scenarios
 
-You've defined the `addToCart` function, enabling users to add products to their cart with the provided quantity and price.
+Parse JSON safely
 
-===================================================================
-**_ Steps for Retrieving Cart Products from Local Storage _**
-===================================================================
 
-## Step 1: Incorporate `getCartProductFromLocalStorage` into `addToCart`
+🌟 Key Learnings
+.DOM manipulation without frameworks
 
-## Step 2: Define `getCartProductFromLocalStorage`
+.Event delegation for performance
 
-## Step 3: Retrieve Cart Products by using `localStorage.getItem()`
+.Modular JavaScript architecture
 
-## Step 4: Check for Null or Undefined Cart Products
+.Persistent state using localStorage
 
-## Step 5: Parse Cart Products
+📌 Ideal For
 
-## Step 6: Return Cart Products
+✔ JavaScript beginners
+✔ Frontend interviews
+✔ Portfolio projects
+✔ Understanding core web fundamentals
 
+🧑‍💻 Author
 
-**_ Steps to Update Product Price Before Adding to Local Storage _**
-
-
-## Step 1: Extract Price Without Currency Symbol
-
-- Use `replace()` to remove the currency symbol (`₹`) from the product price.
-
-## Step 2: Calculate Total Price
-
-- Multiply the extracted price by the product quantity to calculate the total price.
-
-## Step 3: Prepare Product Data
-
-- Create an object containing the product `id`, `quantity`, and updated `price`.
-
-## Step 4: Add Product Data to Cart Array
-
-- Push the product object to the existing cart array.
-
-## Step 5: Convert Cart Array to JSON and Store in Local Storage
-
-- Convert the updated cart array to JSON format using {`JSON.stringify()`}.
-- Store the JSON string in local storage under a designated key.
+Prince Ranjan
+Frontend / Full-Stack Developer
+Focused on building scalable & clean web applications
 
