@@ -37,19 +37,13 @@ Iterate using forEach() to handle each product individually.
 
 Extract properties like:
 
-id
-
-brand
-
-category
-
-price
-
-stock
-
-description
-
-image
+.id
+.brand
+.category
+.price
+.stock
+.description
+.image
 
 This improves readability and performance.
 
@@ -147,7 +141,31 @@ Parse JSON safely
 
 🧑‍💻 Author
 
-Prince Ranjan
-Frontend / Full-Stack Developer
+Prince Ranjan<br>
+Frontend / Full-Stack Developer<br>
 Focused on building scalable & clean web applications
+
+<img width="1899" height="883" alt="image" src="https://github.com/user-attachments/assets/5734c5ce-d767-40ad-afcf-36c163010469" />
+
+<img width="1903" height="883" alt="image" src="https://github.com/user-attachments/assets/e8fa4c2f-f545-4128-af64-7c20e80be3ee" />
+
+<img width="1901" height="873" alt="image" src="https://github.com/user-attachments/assets/ebc20cd4-7bc9-4c97-bbf7-4a8ae2ddd7a5" />
+
+<img width="1896" height="874" alt="image" src="https://github.com/user-attachments/assets/6f793fcb-41aa-4f74-aee5-ea4ac28ce5a2" />
+
+<img width="1902" height="878" alt="image" src="https://github.com/user-attachments/assets/10844ed2-6fae-43cf-a6ba-d61b90f6d1aa" />
+
+<img width="1902" height="885" alt="image" src="https://github.com/user-attachments/assets/55b51d9f-8405-4675-b58a-3ff377cf435c" />
+
+<img width="1519" height="857" alt="image" src="https://github.com/user-attachments/assets/4a9579bd-b726-4d8b-8e2c-331d16a8a070" />
+
+<img width="1874" height="833" alt="image" src="https://github.com/user-attachments/assets/91e97226-7f40-4b29-b023-e92456442a37" />
+
+
+
+
+
+
+
+
 
